@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/contentBackgroundColor"
     android:orientation="vertical"
     tools:context="com.codemybrainsout.rating.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:elevation="4dp">
+        app:elevation="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,20 +22,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:src="@drawable/ic_menu" />
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/primaryTextColor" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="Settings"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:text="@string/settings"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_size_title" />
         </RelativeLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,24 +44,25 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
+                android:layout_marginTop="@dimen/activity_margin_default"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit Profile"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
             </RelativeLayout>
 
@@ -67,40 +70,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your Status"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/your_status"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
+                android:layout_marginTop="@dimen/activity_margin_default"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Push Notifications"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/push_notifications"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -111,22 +117,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Do Not Disturb"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/do_not_disturb"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -137,22 +145,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Advanced"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/advanced"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -162,23 +172,25 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
+                android:layout_marginTop="@dimen/activity_margin_default"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Submit Feedback"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/submit_feedback"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -190,22 +202,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Rate Us"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/rate_us"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -216,22 +230,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Help"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/help"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -242,23 +258,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.5dp"
-                android:background="@color/white"
+                android:layout_marginBottom="@dimen/activity_margin_default"
+                android:background="@color/cardBackgroundColor"
                 android:clickable="true"
-                android:layout_marginBottom="15dp"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:padding="15dp">
+                android:padding="@dimen/activity_margin_default">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="About"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="@string/about"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/text_size_option" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_arrow" />
@@ -268,6 +286,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>
